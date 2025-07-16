@@ -198,12 +198,12 @@ async def main():
     # Test 1: Get employee network
     print("Test 1: Employee Network")
     network = await logic_layer.get_employee_network("advait", depth=2)
-    print(f"Network for advait: {json.dumps^(network, indent=2, default=str^)}\n")
+    print(f"Network for advait: {json.dumps(network, indent=2, default=str)}\n")
     
     # Test 2: Find collaboration path
     print("Test 2: Collaboration Path")
     path = await logic_layer.find_collaboration_path("advait", "priya")
-    print(f"Path from advait to priya: {json.dumps^(path, indent=2, default=str^)}\n")
+    print(f"Path from advait to priya: {json.dumps(path, indent=2, default=str)}\n")
     
     # Test 3: Direct traversal
     print("Test 3: Direct Traversal")
@@ -213,7 +213,7 @@ async def main():
         filters={},
         limit=10
     )
-    print(f"Traversal from advait: {json.dumps^(traversal_result, indent=2, default=str^)}")
+    print(f"Traversal from advait: {json.dumps(traversal_result, indent=2, default=str)}")
 
 if __name__ == "__main__":
     asyncio.run(main())
